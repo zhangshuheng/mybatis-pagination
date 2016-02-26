@@ -13,16 +13,16 @@
 
     <developers>
         <developer>
-            <id>peak yfyang</id>
-            <email>poplar1123@gmail.com</email>
+            <id>zhshuheng</id>
+            <email>zhshuheng@gmail.com</email>
         </developer>
     </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mybatis.version>3.2.2</mybatis.version>
-        <spring.version>3.2.4.RELEASE</spring.version>
-        <spring.mybatis.version>1.2.0</spring.mybatis.version>
+        <mybatis.version>3.2.3</mybatis.version>
+        <spring.version>4.1.0.RELEASE</spring.version>
+        <spring.mybatis.version>1.2.1</spring.mybatis.version>
         <github.global.server>github</github.global.server>
     </properties>
 
@@ -102,9 +102,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>net.sourceforge</groupId>
+            <groupId>net.sourceforge.jtds</groupId>
             <artifactId>jtds</artifactId>
-            <version>1.2.5</version>
+            <version>1.3.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -147,7 +147,7 @@
         <dependency>
             <groupId>io.github.yfyang</groupId>
             <artifactId>sparta-helper</artifactId>
-            <version>0.0.1</version>
+            <version>0.0.2</version>
         </dependency>
 
     </dependencies>
@@ -180,7 +180,7 @@
             <plugin>
                 <groupId>com.github.github</groupId>
                 <artifactId>site-maven-plugin</artifactId>
-                <version>0.8</version>
+                <version>0.12</version>
                 <configuration>
                     <message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
                     <noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
@@ -188,7 +188,7 @@
                     <branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
                     <includes><include>**/*</include></includes>
                     <repositoryName>mybatis-pagination</repositoryName>      <!-- github repo name -->
-                    <repositoryOwner>yfyang</repositoryOwner>    <!-- github username  -->
+                    <repositoryOwner>zhangshuheng</repositoryOwner>    <!-- github username  -->
                 </configuration>
                 <executions>
                     <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
@@ -216,7 +216,7 @@
         <repository>
             <id>github</id>
             <name>GitHub ${project.artifactId} Repository</name>
-            <url>https://raw.github.com/yfyang/${project.artifactId}/mvn-repo</url>
+            <url>https://raw.github.com/zhshuheng/${project.artifactId}/mvn-repo</url>
         </repository>
     </distributionManagement>
 </project>
