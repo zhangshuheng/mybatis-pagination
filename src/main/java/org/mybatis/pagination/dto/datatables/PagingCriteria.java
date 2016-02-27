@@ -4,6 +4,7 @@
 
 package org.mybatis.pagination.dto.datatables;
 
+import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
 
@@ -18,8 +19,12 @@ import com.google.common.collect.Lists;
  * @version 1.0 2013-09-05 10:37 PM
  * @since JDK 1.5
  */
-public final class PagingCriteria {
-    /** The constant DEFAULT_CRITERIA. */
+public final class PagingCriteria implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/** The constant DEFAULT_CRITERIA. */
     private static final PagingCriteria DEFAULT_CRITERIA = new PagingCriteria(0, PagingCriteria.DEFAULT_SIZE, PagingCriteria.DEFAULT_SIZE);
     /** default page size. */
     private static final int DEFAULT_SIZE = 10;
