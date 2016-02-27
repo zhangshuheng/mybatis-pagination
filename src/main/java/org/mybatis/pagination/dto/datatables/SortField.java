@@ -4,6 +4,8 @@
 
 package org.mybatis.pagination.dto.datatables;
 
+import java.io.Serializable;
+
 /**
  * <p>
  * the sort's filed define.
@@ -13,7 +15,11 @@ package org.mybatis.pagination.dto.datatables;
  * @version 1.0 2013-09-05 10:39 PM
  * @since JDK 1.5
  */
-public final class SortField {
+public final class SortField implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
     /** field name */
     private final String field;
     /** sort direction */
