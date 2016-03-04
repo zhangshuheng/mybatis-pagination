@@ -4,14 +4,16 @@
 
 package org.mybatis.pagination;
 
-import com.google.common.collect.Maps;
+import java.lang.reflect.Array;
+import java.util.Collection;
+import java.util.Date;
+import java.util.Map;
+
 import org.apache.commons.beanutils.BeanMap;
 import org.mybatis.pagination.dto.datatables.PagingCriteria;
 import org.mybatis.pagination.helpers.StringHelper;
 
-import java.lang.reflect.Array;
-import java.util.Collection;
-import java.util.Map;
+import com.google.common.collect.Maps;
 
 /**
  * <p>
@@ -83,8 +85,8 @@ public enum  PagingParametersFinder {
         } else if (obj_class.isArray()) {
             pc = findCriteriaFromArray(object);
         } else {
-            BeanMap map = new BeanMap(object);
-            return findCriteriaFromMap(map);
+			BeanMap map = new BeanMap(object);
+			return findCriteriaFromMap(map);
         }
 
 
@@ -178,7 +180,10 @@ public enum  PagingParametersFinder {
     public static boolean isPrimitiveType(Class clazz) {
         return clazz != null && (clazz.isPrimitive() || clazz.equals(Long.class) || clazz.equals(Integer.class)
                 || clazz.equals(Short.class) || clazz.equals(Byte.class) || clazz.equals(Double.class)
-                || clazz.equals(Float.class) || clazz.equals(Boolean.class) || clazz.equals(Character.class) || clazz.equals(String.class));
+                || clazz.equals(Float.class) || clazz.equals(Boolean.class) 
+                || clazz.equals(Character.class) 
+                || clazz.equals(Date.class) 
+                || clazz.equals(String.class));
 
     }
 }

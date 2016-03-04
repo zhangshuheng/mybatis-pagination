@@ -5,3 +5,4 @@ target/*
 .idea
 /src/main/java/org/.DS_Store
 .DS_Store
+/target/

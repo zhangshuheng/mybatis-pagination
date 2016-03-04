@@ -5,7 +5,7 @@
 
     <groupId>org.mybatis</groupId>
     <artifactId>mybatis-pagination</artifactId>
-    <version>0.0.4</version>
+    <version>0.0.6</version>
     <packaging>jar</packaging>
 
     <name>mybatis-paging</name>
