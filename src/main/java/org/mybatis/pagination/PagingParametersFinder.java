@@ -67,7 +67,7 @@ public enum  PagingParametersFinder {
     private PagingCriteria findCriteriaFromObject(Object object) {
 
         //如果已经寻找过这个对象，现在再来这里肯定是没找到。就直接返回NULL
-        if (search_map.containsKey(object)) {
+        if (search_map.containsKey(object)||object == null) {
             return null;
         }
         //object class
